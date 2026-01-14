@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, consequuntur.</h1>
+    <h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut accusamus perferendis inventore, reiciendis magnam
+        labore et ea fugiat molestiae rerum cum quisquam, laborum ab saepe recusandae dignissimos repudiandae laudantium
+        nobis!
+        Minus eaque doloremque facere pariatur asperiores voluptas architecto, nemo tempore laudantium velit eum
+        perferendis explicabo. Debitis eveniet possimus fugiat quidem earum recusandae impedit, consequuntur quo natus
+        omnis quas. Rerum, iste.
+        Soluta debitis aliquid dolores ipsa culpa inventore qui aliquam vero eum ut reiciendis enim nesciunt, corrupti
+        voluptatum saepe totam, tempore expedita, molestias odio fuga nulla cum! Cum voluptatum placeat hic.
+        Quisquam iure eligendi possimus explicabo, aut temporibus itaque laudantium similique odio minima provident
+        numquam, unde maiores tenetur. Minus possimus ducimus illum molestiae odio, consequuntur vero et, quos tempore
+        ratione similique!
+        Reiciendis laudantium accusantium sunt natus nostrum unde pariatur, cum commodi harum perspiciatis molestiae
+        doloremque blanditiis voluptates quibusdam quis laboriosam similique facere odit quia debitis vitae. Esse eos
+        facere in iusto.</h2>
+        <h2>
+       Accusantium ad voluptatum itaque repellat iusto accusamus quo exercitationem architecto aperiam fuga ipsum illo,
+        reiciendis, nostrum distinctio. Laudantium perferendis commodi ea officia voluptates beatae totam porro quas.
+        Asperiores, voluptate ex?
+        Unde eveniet odit beatae praesentium velit, ea saepe, quos eligendi sed porro dignissimos maxime ipsum officiis
+        molestias accusamus, autem earum fugiat. Voluptatibus cum provident laboriosam at, deleniti nulla omnis
+        possimus?</h2><p class="g1">
+        Quisquam dolores aliquid ducimus debitis possimus neque. Iste ea totam voluptatibus obcaecati numquam provident
+        dolores nam omnis ab quo? Perspiciatis odio iusto nisi amet corrupti praesentium fugit incidunt vel ea.
+        Iste suscipit quasi hic dignissimos, unde tenetur, optio, cumque eveniet esse ipsum dolor dolores ratione ut
+        veniam deserunt est non necessitatibus odit autem rerum! Culpa repellendus tenetur commodi magni rerum?
+        Nemo nam mollitia pariatur nobis neque animi incidunt deleniti magnam inventore quae eos voluptas tenetur,
+        molestiae officia unde! Non officiis delectus suscipit quas molestiae sit quis dolor expedita dolores alias.
+        <button onclick="butto()">Change Case</button>
+        <button onclick="colo()">Change color</button>
+    </p>
+    <script>
+        function colo(){
+        document.getElementById('h1').style.color="red"
+        let eles=document.getElementsByTagName('h2')
+        // returning all h2 as a collection 
+        eles[0].style.color="brown"//change color of first h2
+        for(ele of eles){//change all h2
+            ele.style.color="blue"
+        }
+        }
+        function butto(){
+        let g1items=document.getElementsByClassName("g1")
+        g1items[0].style.textTransform="uppercase"
+        g1items[1].style.textTransform="uppercase"
+        g1items[2].style.textTransform="uppercase"
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            font-size: 20px;
+        }
+        #gparent
+        {
+            background-color: red;
+            width: 80%;
+            height: 300px;
+            position: relative;
+        }
+        #parent {
+            background-color: yellow;
+            width: 50%;
+            height: 150px;
+            position: relative;
+        }
+
+        #child {
+            background-color: blue;
+            width: 30%;
+            height: 75px;
+            position: absolute;
+            /*postioning wrt immediately poistion ancestor*/
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gparent">
+        <div id="parent">
+            parent
+            <div id="child">
+                child
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

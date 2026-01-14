@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="myh1">DOM MANIPULATION</h1>
+    <div id="mydiv">
+
+    </div>
+    <script>
+        let ele=document.getElementById("myh1")
+        console.log("ENTIRE ELEMENT :",ele)
+        console.log("CONTENT OF ELEMENT :",ele.textContent)
+        //update content
+        ele.textContent="new content "
+        ele.innerHTML="<u>new content</u>"
+        ele.style.backgroundColor="red"
+        ele.style.color="yellow"
+    </script>
+
+</body>
+</html>

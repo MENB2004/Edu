@@ -1,0 +1,472 @@
+<-- Table -->
+
+<table border="1" cellspacing="1" cellpadding="5"> :- table with border thick 1, space btw cell is 1, space inside the cell(cellpadding) is 1.
+<tr></tr> :- table row
+<th></th> :- table head
+<td></td> :- table column
+<thead></thead> :- to group the header rows of a table
+<th colspan="2"> :- increase the specific col size to 2
+<th rowspan="2"> :- move the specific row to shift to next row to change the table arrangement
+
+<-- Selectors-->
+
+* :- universal Selectors
+example:-
+*
+        {
+            text-transform: capitalize;
+        }
+
+:-
+it is used to captilize the text used in the text.
+
+external css :- it stands for code reusablity among multiple pages.
+
+<link rel="stylesheet" href="style.css">
+```
+
+internal css :- it stands for applying css in the same page.
+```html
+<style>
+    h1 {
+        color: blue;
+    }
+</style>
+```
+
+inline css :- it stands for applying css in the same line.
+```html
+<h1 style="color:blue;">This is a Heading</h1>
+
+
+
+<--Display-->
+
+ inline:- to put everything in a line
+block:- to make everything block
+display: none :- no space for the selected head
+visibility: hidden :- providing space wuth hiding the head
+relative units:- units automatically adujusting according to screen size
+10rem means 500px
+10em means 750px
+view port:- visible browser area
+
+<--Units-->
+px:- pixels
+%:- percentage
+em:- relative to the font-size of the element
+rem:- relative to the font-size of the root element
+vw:- viewport width
+vh:- viewport height
+
+/* Universal selector */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+}
+
+
+
+<------Position in css-------->
+
+1. Static:- Default position, no effect on the element.
+2. Relative - moving wrt its own Position
+3. Absolute - moving wrt to its closset asset
+4. Fixed - placing elemt in a fixed place
+5. Sticky - it will behave like fixed when u reach top 0px while scrolling
+
+<--Animations-->
+funtion:- in hoover use transformer
+scale:- Reduce the size
+rotate:- to rotate  the shape
+to change the shape use border radius (50% is circle)
+translate :- to move object in x or y direction
+transilation :- to see the transition or and animation in fixed time using transform
+ease-in:- to show or create special movement
+ease-out:- to show or create special movement
+ease-in-out:- to show or create special movement
+linear:- to show or create special movement
+steps(4,end):- to show or create special movement
+
+<--Flexbox-->
+
+flex:- to flex or align everything automatically
+flex-direction: row-reverse:-to reverse the rowflex-direction: column:- to make everything in column
+flex-direction: column-reverse:- to reverse the column
+justify-content: center:- to make the content in center
+justify-content: space-between:- to make the content in space between
+justify-content: space-around:- to make the content in space around
+justify-content: space-evenly:- to make the content in space evenly
+align-items: center:- to make the items in center
+align-items: flex-start:- to make the items in flex-start
+align-items: flex-end:- to make the items in flex-end
+align-items: stretch:- to make the items in stretch
+align-items: baseline:- to make the items in baseline
+flex-wrap: wrap:- to wrap the content
+flex-wrap: wrap-reverse:- to wrap the content in reverse
+flex-flow: row wrap:- to make the content in row wrap
+order:- to change the order of the content
+flex-grow:- to grow the content
+flex-shrink:- to shrink the content
+flex-basis:- to set the initial size of the content
+align-self:- to align the specific item
+
+<--Grid-->
+
+grid:- to make everything in grid
+grid-template-columns:- to make the columns in grid
+grid-template-rows:- to make the rows in grid
+grid-template-areas:- to make the areas in grid
+grid-gap:- to make the gap in grid
+grid-column-start:- to start the column in grid
+grid-column-end:- to end the column in grid
+grid-row-start:- to start the row in grid
+grid-row-end:- to end the row in grid
+grid-column:- to make the column in grid
+grid-row:- to make the row in grid
+justify-items:- to justify the items in grid
+align-items:- to align the items in grid
+place-items:- to place the items in grid
+justify-content:- to justify the content in grid
+align-content:- to align the content in grid
+place-content:- to place the content in grid
+grid-auto-flow:- to make the flow in grid
+grid-auto-columns:- to make the columns in grid
+grid-auto-rows:- to make the rows in grid
+grid-template:- to make the template in grid
+grid-template-areas:- to make the areas
+grid-template-columns:- to make the columns in grid
+grid-template-rows:- to make the rows in grid
+grid-template-areas:- to make the areas in
+
+1fr,2fr,3fr,4fr fractional units
+
+<--Java Script-->
+
+Frameworks- Next, Nuxt, Svelte
+Javascript is a high-level, interpreted programming language.
+It is a scripting language for Web pages.
+It is used for both client-side and server-side development.
+It is a dynamically typed language.
+It is a multi-paradigm language (supports object-oriented, imperative, and functional programming).
+
+// Runtime Environments:
+Browser (Client-side)
+Node.js (Server-side)
+
+// Transpilers:
+Babel (converts modern JavaScript into backward compatible version of JavaScript)
+
+// Typescript:
+Superset of JavaScript that adds static typing.
+
+// Libraries:
+ Backend-node,dino,nest
+ Vanilla Js
+ Js Engine- V8, Spidermonkey, Chakra,
+ ECMA- ECMA Script (ES) (ECMA means European Computer Manufacturers Association)
+ ES!,ES2,----(ES)
+
+// How to print in JS
+console.log("Hello World");
+console.warn("This is a warning");
+console.error("This is an error");
+
+
+// Variables
+var a = 10; // var is function scoped
+let b = 20; // let is block scoped, can be reassigned
+const c = 30; // const is block scoped, cannot be reassigned
+
+// Data Types
+// Primitive Data Types:
+// Number: 10, 3.14
+// String: "Hello", 'World'
+// Boolean: true, false
+// Undefined: variable declared but not assigned a value
+// Null: intentional absence of any object value
+// Symbol: unique and immutable value (ES6)
+// BigInt: for very large integers (ES11)
+
+// Non-Primitive Data Types:
+// Object: { key: "value" }
+// Array: [1, 2, 3]
+// Function: function() {}
+
+// Operators
+// Arithmetic Operators: +, -, *, /, %, ++, --
+// Assignment Operators: =, +=, -=, *=, /=, %=
+// Comparison Operators: ==, ===, !=, !==, >, <, >=, <=
+// Logical Operators: && (AND), || (OR), ! (NOT)
+// Ternary Operator: condition ? expressionIfTrue : expressionIfFalse
+
+// Conditional Statements
+// if, else if, else
+if (a > b) {
+    console.log("a is greater than b");
+} else if (a < b) {
+    console.log("a is less than b");
+} else {
+    console.log("a is equal to b");
+}
+
+// switch
+let day = "Monday";
+switch (day) {
+    case "Monday":
+        console.log("It's Monday!");
+        break;
+    case "Tuesday":
+        console.log("It's Tuesday!");
+        break;
+    default:
+        console.log("It's another day.");
+}
+
+// Loops
+// for loop
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// while loop
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+
+// do-while loop
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 5);
+
+//nextedloops means loop inside loop
+
+
+// Functions
+// Function Declaration
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+console.log(greet("John"));
+
+// Function Expression
+const farewell = function(name) {
+    return "Goodbye, " + name + "!";
+};
+console.log(farewell("Jane"));
+
+// Arrow Function (ES6)
+const add = (a, b) => a + b;
+console.log(add(5, 3));
+
+// Objects
+const person = {
+    firstName: "Alice",
+    lastName: "Smith",
+    age: 30,
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+console.log(person.fullName());
+
+// Arrays
+const fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]); // Accessing elements
+fruits.push("Date"); // Adding elements
+fruits.pop(); // Removing elements from the end
+fruits.unshift("Apricot"); // Adding elements to the beginning
+fruits.shift(); // Removing elements from the beginning
+
+// Array methods
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});
+
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers);
+
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sum);
+
+// DOM Manipulation (Browser-specific)
+// Selecting elements
+// document.getElementById("myId");
+// document.getElementsByClassName("myClass");
+// document.getElementsByTagName("p");
+// document.querySelector(".myClass"); // Selects the first element that matches the CSS selector
+// document.querySelectorAll(".myClass"); // Selects all elements that match the CSS selector
+
+// Changing content
+// element.innerHTML = "New content";
+// element.textContent = "New text content";
+
+// Changing attributes
+// element.setAttribute("src", "newimage.jpg");
+// element.classList.add("new-class");
+// element.classList.remove("old-class");
+
+//DOM means Document Object Model
+definition: The DOM (Document Object Model) is a programming interface for web documents. It represents the page structure as a tree of objects, where each object corresponds to a part of the document (e.g., an element, attribute, or text). This object-oriented representation allows programming languages like JavaScript to interact with and modify the content, structure, and style of a web page.
+
+// Creating new elements
+// const newDiv = document.createElement("div");
+// newDiv.textContent = "I am a new div!";
+// document.body.appendChild(newDiv);
+
+// Appending an element to another element
+// parentElement.appendChild(childElement);
+
+// Inserts newElement before referenceElement in the parentElement.
+// parentElement.insertBefore(newElement, referenceElement); 
+
+
+// Removing elements
+// element.remove();
+// parentElement.removeChild(childElement);
+
+
+// Event Handling in js means responding to user interactions or browser events.
+// Syntax:
+// element.addEventListener(event, handlerFunction);
+// element.onclick = handlerFunction; // Older way, only one handler per event type
+
+// Events
+// Common Events:
+// Mouse Events: click, dblclick, mouseenter, mouseleave, mouseover, mouseout, mousemove
+// Touch Events: touchstart, touchmove, touchend, touchcancel
+// Keyboard Events: keydown, keyup, keypress
+// Form Events: submit, change, focus, blur
+// Document/Window Events: load, unload, resize, scroll
+
+// Event Listener: A function that waits for an event to occur and then executes some code.
+
+// Syntax:
+// element.addEventListener(event, handlerFunction, useCapture);
+// event: A string representing the event type (e.g., "click", "mouseover").
+// handlerFunction: The function to be executed when the event occurs.
+// useCapture (optional): A boolean value specifying whether to use event bubbling (false, default) or event capturing (true).
+
+// Example:
+
+// const button = document.getElementById("myButton");
+// button.addEventListener("click", function() {
+//     alert("Button clicked!");
+// });
+
+<!--Git-->
+
+Definition: Git is a distributed version control system used for tracking changes in source code
+Syntax: git init
+Command: git
+
+
+// Introduction to Git
+Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.
+
+**Key Concepts:**
+
+*   **Repository (Repo):** A directory where Git stores all the project files and the complete history of changes.
+*   **Commit:** A snapshot of your repository at a specific point in time. Each commit has a unique ID (SHA-1 hash), a message, an author, and a timestamp.
+*   **Branch:** A lightweight movable pointer to a commit. It allows you to diverge from the main line of development and work on new features or bug fixes independently.
+*   **Master/Main:** The default branch name in Git, representing the main line of development.
+*   **Head:** A pointer to the current branch you are working on.
+*   **Working Directory:** The files you see and edit on your local machine.
+*   **Staging Area (Index):** An intermediate area where you prepare changes before committing them.
+*   **Remote Repository:** A version of your repository hosted on a server (e.g., GitHub, GitLab, Bitbucket) that allows for collaboration and backup.
+
+**Basic Git Workflow:**
+
+1.  **Initialize a repository:** `git init`
+2.  **Add changes to the staging area:** `git add <file>` or `git add .` (for all changes)
+3.  **Commit changes:** `git commit -m "Your commit message"`
+4.  **View history:** `git log`
+5.  **Create a new branch:** `git branch <branch-name>`
+6.  **Switch to a branch:** `git checkout <branch-name>` or `git switch <branch-name>` (newer)
+7.  **Merge branches:** `git merge <branch-to-merge>`
+8.  **Push to a remote repository:** `git push <remote-name> <branch-name>`
+9.  **Pull from a remote repository:** `git pull <remote-name> <branch-name>`
+
+**Common Git Commands:**
+
+*   `git status`: Shows the status of your working directory and staging area.
+*   `git diff`: Shows changes between the working directory and the staging area, or between commits.
+*   `git
+
+**Version Controller & collaboration**
+
+clone <repository-url>`: Creates a local copy of a remote repository.
+
+*   `git remote add origin <repository-url>`: Adds a remote repository.
+*   `git reset <file>`: Unstages a file.
+*   `git restore <file>`: Discards changes in the working directory.
+*   `git revert <commit-hash>`: Creates a new commit that undoes the changes of a previous commit.
+*   `git rebase <base-branch>`: Rewrites commit history by moving or combining commits.
+
+**How to use Github for version & collaboration**
+
+GitHub is a web-based platform that uses Git for version control. It provides a centralized place for developers to host and manage their Git repositories, facilitating collaboration, code sharing, and project management.
+
+**Key Features of GitHub:**
+
+*   **Repository Hosting:** Stores Git repositories online, making them accessible from anywhere.
+*   **Collaboration Tools:**
+    *   **Pull Requests (PRs):** A mechanism for proposing changes to a repository. Developers can discuss, review, and approve changes before merging them into the main codebase.
+    *   **Code Review:** Allows team members to review each other's code, provide feedback, and ensure code quality.
+    *   **Issues:** A system for tracking bugs, feature requests, and other tasks related to a project.
+    *   **Wikis:** For project documentation.
+    *   **Projects (Kanban boards):** For task management and workflow visualization.
+*   **Social Coding:** Features like starring repositories, following users, and contributing to open-source projects.
+*   **Integrations:** Connects with various third-party tools for continuous integration/continuous deployment (CI/CD), project management, and more.
+
+**Basic GitHub Workflow for Collaboration:**
+
+1.  **Fork a Repository (for open-source contributions) or Clone a Repository (for team projects):**
+    *   **Fork:** Creates a personal copy of a repository on your GitHub account. You make changes in your fork and then propose them back to the original repository via a Pull Request.
+    *   **Clone:** Downloads a copy of a repository to your local machine. You typically clone repositories you have direct write access to (e.g., team projects).
+        `git clone <repository-url>`
+
+2.  **Create a New Branch:**
+    *   Always work on a new branch for new features or bug fixes to keep the `main` branch clean.
+        `git checkout -b <feature-branch-name>`
+
+3.  **Make Changes and Commit:**
+    *   Edit files, add new code, etc.
+    *   Stage your changes: `git add .`
+    *   Commit your changes: `git commit -m "Descriptive commit message"`
+
+4.  **Push Changes to Your Remote Branch:**
+    *   Upload your local branch to your GitHub repository.
+        `git push origin <feature-branch-name>`
+
+5.  **Create a Pull Request (PR):
+    *   Go to your repository on GitHub.
+    *   GitHub will usually detect your newly pushed branch and offer a "Compare & pull request" button.
+    *   Fill in the PR title and description, explaining what changes you made and why.
+    *   Assign reviewers (if applicable) and link to any relevant issues.
+
+6.  **Code Review and Discussion:**
+    *   Team members or maintainers review your code, suggest changes, and discuss the implementation.
+    *   You might need to make further commits to your branch and push them to update the PR.
+
+7.  **Merge Pull Request:**
+    *   Once the code is approved, a maintainer merges your branch into the target branch (e.g., `main`).
+    *   After merging, you can delete your feature branch on GitHub and locally.
+
+8.  **Sync Your Local Repository:**
+    *   After a PR is merged, pull the latest changes from the remote `main` branch to keep your local repository up-to-date.
+        `git checkout main`
+        `git pull origin main`
+
+1. GitHub Web GUI
+2. GUI Clients - GitHub Desktop / VSCode Source control
+3. Command Line Interface (CLI)

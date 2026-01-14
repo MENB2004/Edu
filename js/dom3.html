@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="id" class="g1" onclick="changeColor('red')" ondblclick="changeColor('green')"> DOM</h1>
+    <p id="id1" class="g1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam corporis iure nulla
+        reprehenderit
+        blanditiis fugiat rem excepturi. Quidem expedita id ea non repudiandae iste ab nulla, fugit cumque
+        necessitatibus!
+        Ducimus placeat qui assumenda eveniet cupiditate a explicabo vitae, itaque nisi voluptatem repellendus
+        repudiandae eum aut sed eligendi, eaque ab? Tempora deserunt dolorem ullam, sint saepe ut eaque neque
+        blanditiis.
+        Modi natus mollitia commodi facere quaerat ullam, perferendis adipisci, quam rerum aspernatur odio illum nihil
+        totam quos! Distinctio repellendus saepe explicabo ipsam asperiores sapiente, molestias ad autem sit. Suscipit,
+        atque.
+        Laborum voluptatibus dicta distinctio, voluptatum, neque iure at cupiditate voluptates aperiam soluta expedita?
+        Facere quaerat, obcaecati beatae rem libero, voluptate quae dicta doloribus ratione dolorem quasi aspernatur
+        aperiam. Ab, beatae.</p>
+    <br>
+    <button onclick="dark()">DARK THEME</button>
+    <button onclick="light()">LIGHT THEME</button>
+    <button onclick="show()" id="bt1" style="visibility: hidden;">SHOW</button>
+    <button onclick="hide()" id="bt2">HIDE</button>
+    <script>
+        let h1 =document.getElementById("id")
+        function changeColor(color)
+        {
+            document.getElementById("id").style.color=color;
+        }
+        function changeFont()
+        {
+            h1.style.fontFamily='Impact'
+        }
+        h1.addEventListener('click',changeFont)
+        
+        let dark = () => {
+            document.bgColor = "black"
+            g1items = document.getElementsByClassName("g1")
+            g1items[0].style.color = "white"
+            g1items[1].style.color = "white"
+        }
+        let light = () => {
+            document.bgColor = "white"
+            g1items = document.getElementsByClassName("g1")
+            g1items[0].style.color = "black"
+            g1items[1].style.color = "black"
+
+        }
+        let hide = () => {
+
+            document.getElementById("id1").style.visibility = "hidden"
+            document.getElementById("bt1").style.visibility = "visible"
+            document.getElementById("bt2").style.visibility = "hidden"
+
+
+        }
+         let show = () => {
+
+            document.getElementById("id1").style.visibility = "visible"
+            document.getElementById("bt1").style.visibility = "hidden"
+            document.getElementById("bt2").style.visibility = "visible"
+
+
+        }
+    </script>
+</body>
+
+</html>
