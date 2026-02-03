@@ -470,3 +470,269 @@ GitHub is a web-based platform that uses Git for version control. It provides a 
 1. GitHub Web GUI
 2. GUI Clients - GitHub Desktop / VSCode Source control
 3. Command Line Interface (CLI)
+
+<<<<<<< PYTHON >>>>>>>>>>
+
+# Introduction to Python
+# Python is a high-level, interpreted, interactive, and object-oriented scripting language.
+# It is designed to be highly readable. It uses English keywords frequently where other languages use punctuation, and it has fewer syntactical constructions than other languages.
+
+# How to run Python code:
+# 1. Interactive mode: Type 'python' in your terminal and start typing code.
+# 2. Script mode: Save your code in a .py file (e.g., my_script.py) and run it using 'python my_script.py' in the terminal.
+
+# Comments in Python
+# Single-line comment:
+# This is a single-line comment
+
+# Multi-line comment (using triple quotes):
+"""
+This is a multi-line comment.
+It can span across multiple lines.
+"""
+
+# Variables in Python
+# Variables are used to store data values. Python is dynamically typed, so you don't need to declare the type.
+name = "Alice"
+age = 30
+height = 5.7
+is_student = True
+
+# Printing output
+print("Hello, Python!")
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Is student:", is_student)
+
+# Data Types in Python
+# 1. Numbers: int, float, complex
+integer_num = 10
+float_num = 10.5
+complex_num = 3 + 4j
+
+print(type(integer_num))
+print(type(float_num))
+print(type(complex_num))
+
+# 2. Strings: Sequence of characters
+string_var = "This is a string"
+print(type(string_var))
+
+# String operations
+print(string_var[0])  # Accessing characters
+print(string_var[0:4]) # Slicing
+print(len(string_var)) # Length
+print("Hello" + " " + "World") # Concatenation
+print("Python " * 3) # Repetition
+
+# 3. Booleans: True or False
+bool_var = True
+print(type(bool_var))
+
+# 4. Lists: Ordered, mutable (changeable), allows duplicate members
+my_list = [1, 2, 3, "apple", True]
+print(type(my_list))
+print(my_list[0])
+my_list.append(4)
+my_list[0] = 0
+print(my_list)
+
+# 5. Tuples: Ordered, immutable (unchangeable), allows duplicate members
+my_tuple = (1, 2, 3, "banana", False)
+print(type(my_tuple))
+print(my_tuple[0])
+# my_tuple.append(4) # This would raise an error
+# my_tuple[0] = 0    # This would raise an error
+
+# 6. Sets: Unordered, unindexed, mutable, no duplicate members
+my_set = {1, 2, 3, 1, "apple"}
+print(type(my_set))
+print(my_set) # Duplicates are removed
+my_set.add(4)
+my_set.remove(1)
+print(my_set)
+
+# 7. Dictionaries: Unordered, mutable, indexed by keys, no duplicate keys
+my_dict = {
+    "name": "Bob",
+    "age": 25,
+    "city": "New York"
+}
+print(type(my_dict))
+print(my_dict["name"])
+my_dict["age"] = 26
+my_dict["occupation"] = "Engineer"
+print(my_dict)
+
+# Operators in Python
+# Arithmetic Operators: +, -, *, /, %, **, //
+print(10 + 3)
+print(10 - 3)
+print(10 * 3)
+print(10 / 3) # Float division
+print(10 % 3) # Modulus
+print(10 ** 3) # Exponentiation
+print(10 // 3) # Floor division
+
+# Comparison Operators: ==, !=, >, <, >=, <=
+print(10 == 3)
+print(10 != 3)
+print(10 > 3)
+
+# Logical Operators: and, or, not
+print(True and False)
+print(True or False)
+print(not True)
+
+# Assignment Operators: =, +=, -=, *=, /=, %=, **=, //=
+x = 5
+x += 3 # Equivalent to x = x + 3
+x -= 2 # Equivalent to x = x - 2
+x *= 4 # Equivalent to x = x * 4
+x /= 2 # Equivalent to x = x / 2
+x %= 3 # Equivalent to x = x % 3
+x **= 2 # Equivalent to x = x ** 2
+x //= 3 # Equivalent to x = x // 3
+
+# Conditional Statements
+# if, elif, else
+temperature = 25
+if temperature > 30:
+    print("It's hot!")
+elif temperature > 20:
+    print("It's warm.")
+else:
+    print("It's cold.")
+
+# Loops
+# for loop
+# Iterating over a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Iterating over a string
+for char in "Python":
+    print(char)
+
+# Iterating using range()
+for i in range(5): # 0, 1, 2, 3, 4
+    print(i)
+
+for i in range(2, 5): # 2, 3, 4
+    print(i)
+
+for i in range(0, 10, 2): # 0, 2, 4, 6, 8
+    print(i)
+
+# while loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+# break and continue
+for i in range(10):
+    if i == 5:
+        break # Exits the loop
+    if i % 2 == 0:
+        continue # Skips the rest of the current iteration
+    print(i)
+
+# Functions in Python
+# Defining a function
+def greet_user(name):
+    """This function greets the user by name."""
+    print(f"Hello, {name}!")
+
+# Calling a function
+greet_user("Alice")
+greet_user("Bob")
+
+# Function with return value
+def add_numbers(a, b):
+    """This function returns the sum of two numbers."""
+    return a + b
+
+result = add_numbers(10, 5)
+print("Sum:", result)
+
+# Function with default parameters
+def power(base, exponent=2):
+    return base ** exponent
+
+print(power(3))      # Output: 9 (3^2)
+print(power(3, 3))   # Output: 27 (3^3)
+
+# Function with arbitrary arguments (*args)
+def sum_all(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(sum_all(1, 2, 3))
+print(sum_all(1, 2, 3, 4, 5))
+
+# Function with arbitrary keyword arguments (**kwargs)
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Alice", age=30, city="London")
+
+# Lambda Functions (Anonymous Functions)
+# Small, anonymous functions defined with the `lambda` keyword.
+# They can take any number of arguments but can only have one expression.
+multiply = lambda x, y: x * y
+print(multiply(5, 4))
+
+# Classes and Objects (Object-Oriented Programming)
+# A class is a blueprint for creating objects.
+# An object is an instance of a class.
+
+class Dog:
+    # Class attribute
+    species = "Canis familiaris"
+
+    # Constructor method (initializer)
+    def __init__(self, name, age):
+        self.name = name  # Instance attribute
+        self.age = age    # Instance attribute
+
+    # Instance method
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+    def description(self):
+        return f"{self.name} is {self.age} years old."
+
+# Creating objects (instances of the Dog class)
+my_dog = Dog("Buddy", 3)
+your_dog = Dog("Lucy", 5)
+
+# Accessing attributes
+print(my_dog.name)
+print(my_dog.age)
+print(my_dog.species)
+
+# Calling methods
+print(my_dog.bark())
+print(your_dog.description())
+
+# Inheritance
+class GoldenRetriever(Dog):
+    def __init__(self, name, age, color):
+        super().__init__(name, age) # Call the constructor of the parent class
+        self.color = color
+
+    def bark(self): # Method overriding
+        return f"{self.name} says Woof woof!"
+
+    def retrieve(self, item):
+        return f"{self.name} retrieved the {item}!"
+
+golden = GoldenRetriever("Max", 2, "golden")
+print(golden.bark())
+print(golden.retrieve("ball"))
