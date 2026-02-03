@@ -1,0 +1,82 @@
+python virtual environment
+1. Create a virtual environment:
+   python -m venv venv
+
+2. Activate the virtual environment:
+   - Windows: venv\Scripts\activate
+   - macOS/Linux: source venv/bin/activate
+
+3. Install Django:
+   pip install django
+
+4. Create a new project:
+   django-admin startproject project_name .
+
+5. Change file:
+   cd project_name
+
+6. Run the development server:
+   python manage.py runserver
+   
+7. Create a new app:
+   python manage.py startapp app_name
+
+8.Registering your app:
+   - Open settings.py
+   - Add 'app_name' to the INSTALLED_APPS list:
+     INSTALLED_APPS = [
+         ...
+         'app_name',
+     ]
+
+9. Create a view:
+   - Open app_name/views.py
+   - Add the following code:
+     from django.http import HttpResponse
+
+     def index(request):
+         return HttpResponse("Hello, world!")
+
+10. Map the view to a URL:
+    - Create a file named urls.py in the app_name directory
+    - Add the following code:
+      from django.urls import path
+      from . import views
+
+      urlpatterns = [
+          path('', views.index, name='index'),
+      ]
+
+11. Include the app URLs in the project:
+    - Open project_name/urls.py
+    - Add the following code:
+      from django.contrib import admin
+      from django.urls import include, path
+
+      urlpatterns = [
+          path('app_name/', include('app_name.urls')),
+          path('admin/', admin.site.urls),
+      ]
+
+12. Create a template:
+    - Create a directory named 'templates' inside the app_name directory
+    - Inside 'templates', create another directory named 'app_name'
+    - Create a file named 'index.html' and add your HTML code
+
+13. Update the view to use the template:
+    - Open app_name/views.py
+    - Modify the index function:
+      from django.shortcuts import render
+
+      def index(request):
+          return render(request, 'app_name/index.html')
+
+14. Database Migrations:
+    - Create migrations for changes:
+      python manage.py makemigrations
+    - Apply migrations to the database:
+      python manage.py migrate
+
+15. Create a Superuser:
+    - python manage.py createsuperuser
+   
