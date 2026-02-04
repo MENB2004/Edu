@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
-def home(request):
-    return HttpResponse("<h2> Campus Management System <h2/>")
 #About View
 def student_list(request):
-    return render(request, 'students/student_list.html')
+    
+    stud_records=[{'slno':1,'name':'rahul','course':'cs','sem':3},{'slno':2,'name':'reena','course':'cs','sem':3}]
+
+    data={'admission_closed':True,"count":63,'students':stud_records}
+
+    return render(request, 'students/student_list.html',{'adm_data':data}) # type: ignore
