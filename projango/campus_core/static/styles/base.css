@@ -1,0 +1,28 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    color: red;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: blue;
+    padding-top: 10px;
+    text-align: center;
+    font-size: small;
+    color: gray;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
