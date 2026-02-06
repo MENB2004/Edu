@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{% static '/styles/base.css' %}">
 </head>
 <body>
+    {% block test %}
+
+    {% endblock %}
     <nav>
         <a href="/home">Home</a>
         <a href="/about">About</a>
@@ -15,8 +18,11 @@
     </nav>
 
     {% block content %}
-    {#placeholder for content from child templates #}
-    {% endblock %}
+        <h1>Welcome to Campus Core</h1>
+        <p>This is the home page of the campus management system. {% lorem 3 b random %}</p>
+        <img src="{% static '/image/banner.jpg' %}" width=600px alt="Banner Image">
+        <img src="{% static '/image/campus.jpg' %}" width=800px alt="Campus Image">
+    {% endblock %} 
     {# footer will be common for all templates #}
     <footer>
         &copy; 2024 Campus Core. All rights reserved.

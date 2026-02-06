@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,28 +10,18 @@
 </head>
 <body>
     {# The Following is the context passed from view #}
-    <h2>Admission Data</h2>
-    {% if adm_data.admission_closed %}
-    <h3 style="color:red;">Admission Closed</h3>
-    {% else %}
-    <h3 style="color:green;">Admission is still Open</h3>
-    {% endif %}
     <h2>Total Students Enrolled {{adm_data.count}} </h2>
-    {% if adm_data.count <= 50%}
-    <h3> Total enrollment is less than last year</h3>
-    {% else %}
-    <h3> Total enrollment is more than last year</h3>
-    {% endif %}
     <h1>Student Details</h1>
     <table border="1">
-        <tr><th>SI No</th><th>Name</th><th>Semester</th><th>Course</th></tr>
+        <tr><th>SI No</th><th>Name</th><th>Semester</th><th>Course</th><th colspan="2">Action</th></tr>
         <tr>
-            {% for stud in adm_data.students %}
+            {% for stud in data %}
             <tr>
-                <td>{{stud.slno}}</td><td>{{stud.name}}</td><td>{{stud.sem}}</td><td>{{stud.course}}</td>
+                <td>{{stud.slno}}</td><td>{{stud.name}}</td><td>{{stud.sem}}</td><td>{{stud.course}}</td><td><a id="del_btn" href="/students/delete/{{stud.id}}">Delete</a></td><td><a id="edit_btn" href="/students/update/{{stud.id}}">Update</a></td>
             </tr>
             {% endfor %}
         </tr>
     </table>
 </body>
 </html>
+{% endblock %}``

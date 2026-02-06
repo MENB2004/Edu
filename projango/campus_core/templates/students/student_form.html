@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{# form coming from view will be placed here #}
+<h2>Add Students here</h2>
+<form method='POST'>
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Submit" />
+</form>
+{% endblock %}

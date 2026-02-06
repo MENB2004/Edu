@@ -1,10 +1,39 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .models import Student
+from .forms import StudentForm
 #About View
 def student_list(request):
-    
-    stud_records=[{'slno':1,'name':'rahul','course':'cs','sem':3},{'slno':2,'name':'reena','course':'cs','sem':3}]
+    data=Student.objects.all()#select * from Student
+    print(data)#records fetched from student table
+    return render(request,'students/student_list.html',{'data':data,'count':len(data)})
 
-    data={'admission_closed':True,"count":63,'students':stud_records}
+def student_form(request):
+    # sourcery skip: remove-unnecessary-else, swap-if-else-branches
+    if request.method=="POST":
+        form=StudentForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            form.save()
+        return redirect('studentlist')
+    else:
+        form=StudentForm()
+        return render(request, 'students/student_form.html',{'form':form})
+def student_delete(request,sid):
+    record=Student.objects.get(id=sid)
+    record.delete()
+    return redirect('studentlist')
 
-    return render(request, 'students/student_list.html',{'adm_data':data}) # type: ignore
+def student_update(request,sid):
+    record=Student.objects.get(id=sid)
+    if request.method=="GET":
+        form=StudentForm(instance = record)
+        return render(request,'students/update_form.html',{'form':form})
+    else:
+        form=StudentForm(request.POST, instance=record)
+        if form.is_valid():
+            print(form.cleaned_data)
+            form.save()
+        return redirect('studentlist')
+
+# Create your views here.
