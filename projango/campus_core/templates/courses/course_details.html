@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <table border="1">
-    <tr><th>Name</th><th>Specialization</th><th>fee</th></tr>
+    <tr><th>Name</th><th>Specialization</th><th>Fee</th><th colspan="2">Action</th></tr>
     {% for record in details %}
-    <tr><td>{{record.name}}</td><td>{{record.specialization}}</td><td>{{record.fee}}</td></tr>
+    <tr><td>{{record.name}}</td><td>{{record.specialization}}</td><td>{{record.fee}}</td><td><a id="del_btn" href="/courses/delete/{{record.id}}">Delete</a></td><td><a id="edit_btn" href="/courses/update/{{record.id}}">Update</a></td></tr>
     {% endfor %}
 </table>
 {% endblock %}
