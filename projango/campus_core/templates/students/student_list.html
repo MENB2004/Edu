@@ -17,7 +17,7 @@
         <tr>
             {% for stud in data %}
             <tr>
-                <td>{{stud.slno}}</td><td>{{stud.name}}</td><td>{{stud.sem}}</td><td>{{stud.course}}</td><td><a id="del_btn" href="/students/delete/{{stud.id}}">Delete</a></td><td><a id="edit_btn" href="/students/update/{{stud.id}}">Update</a></td>
+                <td>{{stud.slno}}</td><td>{{stud.name}}</td><td>{{stud.sem}}</td><td>{{stud.course}}</td><td><a id="del_btn" href="/students/delete/{{stud.id}}" onclick="return confirm('Are you sure you want to delete this student?')">Delete</a></td><td><a id="edit_btn" href="/students/update/{{stud.id}}">Update</a></td>
             </tr>
             {% endfor %}
         </tr>

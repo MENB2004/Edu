@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .models import Student
 from .forms import StudentForm
@@ -24,6 +25,7 @@ def student_delete(request,sid):
     record.delete()
     return redirect('studentlist')
 
+@login_required
 def student_update(request,sid):
     record=Student.objects.get(id=sid)
     if request.method=="GET":

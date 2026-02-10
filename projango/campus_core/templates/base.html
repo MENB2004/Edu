@@ -5,20 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Campus Core{% endblock %}</title>
-    <link rel="stylesheet" href="{% static '/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
 </head>
 <body>
     {% block test %}
 
     {% endblock %}
+    <h1>Welcome to Campus Core</h1>
     <nav>
         <a href="/home">Home</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
+        <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Students</a>
+                <div class="dropdown-menu">
+                    <a href="/students/list">Student List</a>
+                    <a href="/students/forms">Add Student</a>
+                </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Courses</a>
+            <div class="dropdown-menu">
+                <a href="/courses/catalog">Course Catalog</a>
+                <a href="/courses/details">Course Details</a>
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="navbar-right">
+            <span>{{user.username}}</span>
+            <form action="{% url 'logout' %}" method='POST'>
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+        {% else %}
+        <div class="navbar-right">
+            <a href="/login">Login</a>
+        </div>
+        {% endif %}
     </nav>
+    <hr>
 
     {% block content %}
-        <h1>Welcome to Campus Core</h1>
         <p>This is the home page of the campus management system. {% lorem 3 b random %}</p>
         <img src="{% static '/image/banner.jpg' %}" width=600px alt="Banner Image">
         <img src="{% static '/image/campus.jpg' %}" width=800px alt="Campus Image">
